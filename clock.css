@@ -1,0 +1,155 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+html,
+body{
+	width: 100%;
+	min-height: 100vh;
+	float: left;
+    background-color: black;
+    overflow: hidden;
+}
+
+.common{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock{
+    width: 600px;
+    height: 600px;
+    background-image: url('https://64.media.tumblr.com/9f6165836021a6202365292971175bb3/tumblr_pigf22vGrn1uzwgsuo1_400.gifv');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    border: 3px solid white;
+    position: relative;
+}
+
+.clock .number{
+    position: absolute;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.number1{
+    top:calc(50% - 35%);
+    right: calc(50% - 20%) ;
+    transform: translateX(50%);
+    transform: translateY(-50%);
+}
+.number2{
+    top:calc(50% - 20%);
+    right: calc(50% - 35%) ;
+    transform: translateX(50%);
+    transform: translateY(-50%);
+}
+.number3{
+    top:50%;
+    right: calc(50% - 42%);
+    transform: translateY(-50%);
+}
+.number4{
+    bottom:calc(50% - 20%);
+    right: calc(50% - 35%) ;
+    transform: translateX(-50%);
+    transform: translateY(50%);
+}
+.number5{
+    bottom:calc(50% - 35%);
+    right: calc(50% - 20%) ;
+    transform: translateX(-50%);
+    transform: translateY(50%);
+}
+.number6{
+    bottom:calc(50% - 42%);
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+.number7{
+    bottom:calc(50% - 35%);
+    left: calc(50% - 20%) ;
+    transform: translateX(-50%);
+    transform: translateY(50%);
+}
+.number8{
+    bottom:calc(50% - 20%);
+    left: calc(50% - 35%) ;
+    transform: translateX(-50%);
+    transform: translateY(50%);
+}
+
+.number9{
+    top:50%;
+    left: calc(50% - 42%);
+    transform: translateY(-50%);
+}
+.number10{
+    top:calc(50% - 20%);
+    left: calc(50% - 35%) ;
+    transform: translateX(-50%);
+    transform: translateY(-50%);
+}
+.number11{
+    top:calc(50% - 35%);
+    left: calc(50% - 20%) ;
+    transform: translateX(-50%);
+    transform: translateY(-50%);
+
+}
+.number12{
+    top:calc(50% - 42%);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.clock .hand{
+    --rotation: 0;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transform-origin: bottom;
+    z-index: 10px;
+    transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+}
+
+.clock::after{
+content: '';
+position:absolute;
+background-image: linear-gradient(to right, blue,indigo,violet);
+z-index: 11;
+width: 15px;
+height: 15px;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+border-radius: 50%;
+}
+
+.clock .hand.second{
+    width: 3px;
+    height: 42%;
+    background-color: rgb(224, 18, 80);
+}
+
+.clock .hand.minute{
+    width: 7px;
+    height: 37%;
+    background-color: rgb(20, 14, 102);
+}
+
+.clock .hand.hour{
+    width: 10px;
+    height: 32%;
+    background-color: rgb(170, 18, 157);
+}
